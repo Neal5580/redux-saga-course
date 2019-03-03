@@ -1,11 +1,16 @@
 {
-  "name": "redux-saga",
+  "name": "redux-saga-course",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-redux": "^6.0.1",
+    "react-scripts": "2.1.5",
+    "reactstrap": "^7.1.0",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
