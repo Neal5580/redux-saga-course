@@ -18,7 +18,13 @@ function* getUsers() {
                 items: result.data.data
             })
         );
-    } catch (e) {}
+    } catch (e) {
+        yield put(
+            actions.userError({
+                error: " An error occured when trying to get the user"
+            })
+        );
+    }
 }
 
 function* createUser(action) {
@@ -29,7 +35,13 @@ function* createUser(action) {
             lastName: action.payload.lastName
         });
         yield call(getUsers);
-    } catch (e) {}
+    } catch (e) {
+        yield put(
+            actions.userError({
+                error: " An error occured when trying to create the user"
+            })
+        );
+    }
 }
 
 function* deleteUser(action) {
@@ -39,7 +51,13 @@ function* deleteUser(action) {
             userId: action.userId
         });
         yield call(getUsers);
-    } catch (e) {}
+    } catch (e) {
+        yield put(
+            actions.userError({
+                error: " An error occured when trying to delete the user"
+            })
+        );
+    }
 }
 
 function* watchGetUsersRequest() {
